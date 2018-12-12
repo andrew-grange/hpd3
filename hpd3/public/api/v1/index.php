@@ -8,8 +8,8 @@ require_once "owners.php";
 require_once "items.php";
 
 $host = "localhost";
-$usr = "jace";
-$pwd = "Ghost797";
+$usr = "andrew";
+$pwd = "andrew";
 $db = "hpd";
 
 

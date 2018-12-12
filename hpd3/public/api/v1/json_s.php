@@ -9,8 +9,8 @@ header("Content-Type: application/json; charset=UTF-8");
 if(isset($_GET{"x"})){
     $obj = json_decode($_GET{"x"}, false);
     $host = "localhost";
-    $usr = "jace";
-    $pwd = "Ghost797";
+    $usr = "andrew";
+    $pwd = "andrew";
     $db = "hpd";
 
     $mysqli = new mysqli($host, $usr, $pwd, $db);

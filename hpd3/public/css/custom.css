@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .login-wrapper {
     width: 100vw;
     height: 100vh;
@@ -11,8 +10,9 @@
   margin: auto;
   background: white;
   border-radius: 5px;
-  padding: 10% 15%;
-=======
+  padding: 15px 15%;
+}
+
 .table-row {
   height: 50px;
   border: 1px solid grey;
@@ -56,5 +56,4 @@
 
 .btnfiltergroup {
     padding-bottom: 1em;
->>>>>>> 622b02f459df4c8b64dd7ff44559f47d568d4e61
 }
