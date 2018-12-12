@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .login-wrapper {
     width: 100vw;
     height: 100vh;
@@ -11,4 +12,49 @@
   background: white;
   border-radius: 5px;
   padding: 10% 15%;
+=======
+.table-row {
+  height: 50px;
+  border: 1px solid grey;
+}
+
+#addusercont {
+    background-color: darkgray;
+    border: 1pt dimgray solid;
+    width: 25%;
+}
+
+#filterForm {
+    background-color: darkgray;
+    border: 1pt dimgray solid;
+    width: 25%;
+}
+
+.pad {
+    padding: .3em;
+}
+
+.myimg {
+    max-height: 5em;
+}
+
+.filterBtn {
+    background-color: darkgray;
+}
+
+.theader:hover {
+    background-color: rgba(83, 92, 104, 0.226);
+}
+
+.option:hover {
+    background-color: darkgrey;
+}
+
+#filterRow {
+    border: 1.49pt lightgrey solid;
+}
+
+.btnfiltergroup {
+    padding-bottom: 1em;
+>>>>>>> 622b02f459df4c8b64dd7ff44559f47d568d4e61
 }

@@ -9,7 +9,11 @@ use Slim\Http\Response;
 
 $app->get('/', function (Request $request, Response $response, array $args) {
     // Sample log message
+<<<<<<< HEAD
     //$this->logger->info("Slim-Skeleton '/' route");
+=======
+    // $this->logger->info("Slim-Skeleton '/' route");
+>>>>>>> 622b02f459df4c8b64dd7ff44559f47d568d4e61
 
     // Render index view
     return $this->renderer->render($response, 'login.phtml', $args);
@@ -17,7 +21,11 @@ $app->get('/', function (Request $request, Response $response, array $args) {
 
 $app->get('/client', function (Request $request, Response $response, array $args) {
     // Sample log message
+<<<<<<< HEAD
     //$this->logger->info("Slim-Skeleton '/client' route");
+=======
+    // $this->logger->info("Slim-Skeleton '/' route");
+>>>>>>> 622b02f459df4c8b64dd7ff44559f47d568d4e61
 
     // Render index view
     return $this->renderer->render($response, 'client.phtml', $args);
@@ -25,6 +33,7 @@ $app->get('/client', function (Request $request, Response $response, array $args
 
 $app->get('/login', function (Request $request, Response $response, array $args) {
     // Sample log message
+<<<<<<< HEAD
     $username = $request->getQueryParam("name", $default = null);
     $policy = $request->getQueryParam("policy", $default = null);
     if($username === "admin" and $policy === "root"){
@@ -46,6 +55,9 @@ $app->get('/login', function (Request $request, Response $response, array $args)
     }
     
     //$this->logger->info($username .= $password .= "Slim-Skeleton '/admin' route");
+=======
+    // $this->logger->info("Slim-Skeleton '/' route");
+>>>>>>> 622b02f459df4c8b64dd7ff44559f47d568d4e61
 
     // Render index view
     
