@@ -4,35 +4,48 @@
         <meta charset="utf-8"/>
         <title>Slim 3</title>
         <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../public/css/custom.css">
+        <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../public/js/controller.js"></script>
         <style>
             body {
-                margin: 50px 0 0 0;
                 padding: 0;
                 width: 100%;
                 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
                 text-align: center;
-                color: #aaa;
+                color: black;
                 font-size: 18px;
             }
 
             h1 {
-                color: #719e40;
-                letter-spacing: -3px;
-                font-family: 'Lato', sans-serif;
-                font-size: 100px;
+                color: black;
                 font-weight: 200;
-                margin-bottom: 0;
             }
         </style>
     </head>
     <body>
-        <h1>LOGIN PAGE</h1>
-        <div>a microframework for PHP</div>
-
-        <?php if (isset($name)) : ?>
-            <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
-        <?php else: ?>
-            <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>
-        <?php endif; ?>
+        <div class='login-wrapper'>
+          <div class='login-panel'>
+          <h1>LOGIN</h1>
+          <form id="LoginForm">
+            <div class="form-group">
+              <label for="exampleInputEmail1">First Name</label>
+              <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your info with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Policy Number</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Policy Number">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Stay Logged In</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+        </div>
     </body>
 </html>

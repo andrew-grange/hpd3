@@ -8,8 +8,12 @@ if (PHP_SAPI == 'cli-server') {
         return false;
     }
 }
-
 require __DIR__ . '/../vendor/autoload.php';
+
+function getConnection() {
+    $conn = new mysqli("localhost", "andrew", "andrew", "hpd");
+    return $conn;
+}
 
 session_start();
 
@@ -25,6 +29,7 @@ require __DIR__ . '/../src/middleware.php';
 
 // Register routes
 require __DIR__ . '/../src/routes.php';
+
 
 // Run app
 $app->run();
