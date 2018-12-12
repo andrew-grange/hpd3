@@ -1,1 +1,1 @@
-cd hpd3; php -S localhost:3000 -t public public/index.php
+cd hpd3; php -S localhost:8080 -t public public/index.php
