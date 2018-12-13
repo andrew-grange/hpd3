@@ -52,6 +52,8 @@
                 <div class="btnfiltergroup">
                     <button class="btn btn-lg option" onclick="addusernow()">Add User</button>
                     <button class="btn btn-lg option" onclick="showFilter()">Filter</button>
+                    <button class="btn btn-lg option" onclick="sumTotalLiability()">Get Total Liability</button>
+                    <span class="totalLiability" style="font-weight: bold; margin-left: 1em;"></span>
                 </div>
                 <div id="filterForm" style="display:none;">
                     <div class="jumbotron-fluid">
@@ -244,6 +246,7 @@
                                     </tbody>
 
                                 </table>
+                                <h4 class="totalOwnerLiability" style="text-align:right; margin-right: 1em;"></h4>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
                                 </div>
@@ -275,7 +278,6 @@
                                     <tbody id="updateItemModalTableBody">
                                         <!-- THIS IS WHERE THE MAGIC HAPPENS -->
                                     </tbody>
-
                                 </table>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>

@@ -7,77 +7,72 @@
 require_once "owners.php";
 require_once "items.php";
 
-// 
+// *** CHANGED TO WORK LocALLY
 $host = "localhost";
 $usr = "tester3";
 $pwd = "tester3";
 $db = "hpd";
+// ***
 
 
 global $host, $usr, $pwd, $db, $mysqli;
 $mysqli = new mysqli($host, $usr, $pwd, $db);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-$argh = explode("/",  $_SERVER['PATH_INFO']);
+  $argh = explode("/",  $_SERVER['PATH_INFO']);
+  $count = count($argh);
+  global $sortColumn;
+  if($count == 2){
+    echo "You sent a POST";
+    if (isset($_REQUEST['fname'])) {
+        $fname = $_REQUEST['fname'];
+      } else {
+        $fname = "";
+      }
+      if (isset($_REQUEST['lname'])) {
+        $lname = $_REQUEST['lname'];
+      } else {
+        $lname = "";
+      }
+      if (isset($_REQUEST['street1'])) {
+        $street1 = $_REQUEST['street1'];
+      } else {
+        $street1 = "";
+      }
+      if (isset($_REQUEST['street2'])) {
+        $street2 = $_REQUEST['street2'];
+      } else {
+        $street2 = "";
+      }
+      if (isset($_REQUEST['city'])) {
+        $city = $_REQUEST['city'];
+      } else {
+        $city = "";
+      }
+      if (isset($_REQUEST['state'])) {
+        $state = $_REQUEST['state'];
+      } else {
+        $state = "";
+      }
+      if (isset($_REQUEST['zip'])) {
+        $zip = $_REQUEST['zip'];
+      } else {
+        $zip = "";
+      }
+      if (isset($_REQUEST['policy'])) {
+        $policy = $_REQUEST['policy'];
+      } else {
+        $policy = "";
+      }
+      if (isset($_REQUEST['expiration'])) {
+        $expiration = $_REQUEST['expiration'];
+      } else {
+        $expiration = "";
+      }
+    echo createOwner($fname, $lname, $street1, $street2, $city, $state, $zip, $policy, $expiration);
+    
 
- 
-
-
-
-
-$count = count($argh);
-global $sortColumn;
-if($count == 2){
-  echo "You sent a POST";
-  if (isset($_REQUEST['fname'])) {
-      $fname = $_REQUEST['fname'];
-    } else {
-      $fname = "";
-    }
-    if (isset($_REQUEST['lname'])) {
-      $lname = $_REQUEST['lname'];
-    } else {
-      $lname = "";
-    }
-    if (isset($_REQUEST['street1'])) {
-      $street1 = $_REQUEST['street1'];
-    } else {
-      $street1 = "";
-    }
-    if (isset($_REQUEST['street2'])) {
-      $street2 = $_REQUEST['street2'];
-    } else {
-      $street2 = "";
-    }
-    if (isset($_REQUEST['city'])) {
-      $city = $_REQUEST['city'];
-    } else {
-      $city = "";
-    }
-    if (isset($_REQUEST['state'])) {
-      $state = $_REQUEST['state'];
-    } else {
-      $state = "";
-    }
-    if (isset($_REQUEST['zip'])) {
-      $zip = $_REQUEST['zip'];
-    } else {
-      $zip = "";
-    }
-    if (isset($_REQUEST['policy'])) {
-      $policy = $_REQUEST['policy'];
-    } else {
-      $policy = "";
-    }
-    if (isset($_REQUEST['expiration'])) {
-      $expiration = $_REQUEST['expiration'];
-    } else {
-      $expiration = "";
-    }
-  echo createOwner($fname, $lname, $street1, $street2, $city, $state, $zip, $policy, $expiration);
-  
-
-}
+  }
   else if ($count == 3){
 
     if (isset($_REQUEST['name'])) {

@@ -75,6 +75,17 @@ function filter(column) {
     });
 }
 
+function sumTotalLiability() {
+    url = '../public/api/v1/items.php/count';
+    $.ajax({
+        url: url,
+        type: 'GET',
+        success: function(result) {
+            document.querySelector(".totalLiability").innerHTML = "$" + parseFloat(result).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        }
+    })
+}
+
 function deleteItem(ownerId, itemId) {
     url = '../public/api/v1/index.php/owners/' + ownerId + '/items/' + itemId;
     $.ajax({
@@ -384,10 +395,11 @@ function showItems(id) {
         $.getJSON(url, function(data) {
 
             items = data;
-            // console.log(items);
             populateModal(id, items);
-            let temp = document.querySelector("#modalTableBody");
-            console.log(temp);
+            let total = 0;
+            items.forEach(item => total += parseFloat(item[4]));
+            console.log((total).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
+            document.querySelector(".totalOwnerLiability").innerHTML = "TOTAL:  $" + (total).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
         });
     });
 

@@ -5,6 +5,33 @@
  * Time: 11:29 AM
  */
 
+if ($_SERVER["REQUEST_METHOD"] === "GET") {
+  $argh = explode("/",  $_SERVER['PATH_INFO']);
+  if ($argh[1] == "count") {
+    countAllLiability();
+  }
+}
+
+function countAllLiability() {
+  
+  // // *** CHANGED TO WORK LocALLY
+  $host = "localhost";
+  $usr = "tester3";
+  $pwd = "tester3";
+  $db = "hpd";
+  $mysqli = new mysqli($host, $usr, $pwd, $db);
+
+  $query = "SELECT SUM(valuation) FROM items;";
+  $result = $mysqli->query($query);
+  if (!$result) {
+    echo $mysqli->error;;
+  } else {
+    $row = $result->fetch_row();
+    $fin = $row[0];
+    echo $fin;
+  }
+}
+
 function createItem($name, $photo, $description, $valuation, $method, $verified, $ownerId) {
 
   header("Status: 201 CREATED");
