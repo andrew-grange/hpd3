@@ -5,12 +5,21 @@
     background: lightgrey;
 }
 .login-panel {
-  height: 100%;
   width: 100%;
   margin: auto;
   background: white;
   border-radius: 5px;
   padding: 15px 15%;
+}
+
+.p-2:hover {
+    cursor: pointer;
+    color: black;
+    transition: 0.18s;
+}
+
+.p-2 {
+    color: #333;
 }
 
 .table-row {
