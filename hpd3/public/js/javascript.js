@@ -248,6 +248,7 @@ function fillOwners(items) {
     for (let item of items) {
         // console.log(item);
         $('#itemsTableBody').append(
+            '<tr data-toggle="modal" data-target="#myModal">' +
             '<td class="well well-sm text-justify" style="width:7%;"><span onClick="deleteOwner(' + item[0] + ')"><i class="fas fa-minus-circle" style="font-size:24px;color:red; padding-right:1em;"></i></span>' +
             '<span onClick="pUM(' + item[0] + ')" data-toggle="modal" data-target="#updateModal"><i class="fas fa-edit" style="font-size:25px;color:green;"></i></span>' +
             "<td onClick=showItems(" + item[0] + ") data-toggle='modal' data-target='#myModal'>" + item[1] + "</td>" +
