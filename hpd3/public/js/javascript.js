@@ -4,6 +4,15 @@ var page = 1,
 const PAGE_SIZE = 10;
 var offset = 0;
 
+function navigate(location) {
+    if (location == 'home') {
+        url = './admin.phtml'; 
+    } else {
+        url = './' + location + '.phtml';
+    }
+    window.location.href = url;
+}
+
 function sortBy(column) {
     if (sortCol == column) {
         if (sortDir == "up") {
@@ -226,7 +235,7 @@ function fillOwners(items) {
 
     $('#itemsTableBody').html("");
     for (let item of items) {
-        console.log(item);
+        // console.log(item);
         $('#itemsTableBody').append(
             "<tr>" +
             '<td class="well well-sm text-justify" style="width:7%;"><span onClick="deleteOwner(' + item[0] + ')"><i class="fas fa-minus-circle" style="font-size:24px;color:red; padding-right:1em;"></i></span>' +

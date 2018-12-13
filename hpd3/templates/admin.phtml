@@ -16,19 +16,22 @@
     <script type="text/javascript" src="../public/js/dommani.js"></script>
     </head>
     <body>
+        <?php echo "WORKING" ?>
         <div class="container-fluid">
             <div class="main-wrapper-first">
                 <div class="jumbotron">
                     <div class="container">
                         <div class="d-flex flex-row">
                             <h1 class="display-3">HPD <span class="display-4">&#8545;</span></h1>
-                            <div class="d-flex flex-row">
-                                <h3 id="scnd_t" class="p-2"><i class="fa fa-arrow-circle-o-right ml-2"></i> Index Page</h3>
-                            </div>
                         </div>
                         <blockquote>
                             <p class="lead">This page displays the Owners Information in cards. When "More" button is clicked a modal is triggered displaying addition info. The load more users at the bottom of the page will load the next 6 owners from the database</p>
                         </blockquote>
+                        <div class="d-flex flex-row">
+                            <h3 id="scnd_t" class="p-2" onclick="navigate('home')"><i class="fa fa-arrow-circle-o-right ml-2"></i> Home</h3>
+                            <h3 id="scnd_t" class="p-2" onclick="navigate('about')"><i class="fa fa-arrow-circle-o-right ml-2"></i> About</h3>
+                            <h3 id="scnd_t" class="p-2" onclick="navigate('contact')"><i class="fa fa-arrow-circle-o-right ml-2"></i> Contact Us</h3>
+                        </div>
                     </div>
 
                 </div>

@@ -7,17 +7,15 @@
 require_once "owners.php";
 require_once "items.php";
 
+// 
 $host = "localhost";
-$usr = "andrew";
-$pwd = "andrew";
+$usr = "tester3";
+$pwd = "tester3";
 $db = "hpd";
 
 
 global $host, $usr, $pwd, $db, $mysqli;
 $mysqli = new mysqli($host, $usr, $pwd, $db);
-
-
-
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 $argh = explode("/",  $_SERVER['PATH_INFO']);
